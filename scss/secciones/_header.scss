@@ -1,0 +1,94 @@
+.nav-encabezado {
+    min-height: 15vh;
+    background-image: $myGrad;
+    border-bottom: 10px solid rgb(11, 6, 6);
+    width: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: baseline;
+    // align-items: flex-start;
+    // align-content: space-between;
+    @include myflex (row, baseline, flex-start, space-between);
+
+    .encabezado-cuerpo {
+        .logo-img {
+            img {
+                height: 12vh;
+            }
+        }
+
+        .mi-navbar {
+            .lista-enlaces {
+                .enlace a {
+                    text-decoration: none;
+                    color: $myColor;
+                    font-size: 30px;
+                    margin: 15px;
+
+                    &:hover {
+                        color: rgb(235, 210, 25);
+                        background-color: transparent;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .form-btn-buscar {
+                .boton-buscar {
+                    margin-right: 20px;
+                    color: $myColor;
+                    font-size: 18px;
+
+                    &:hover {
+                        background-color: rgb(235, 210, 25);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES*/
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .nav-encabezado {
+        .encabezado-cuerpo {
+            .mi-navbar {
+                .lista-enlaces {
+                    .enlace a {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 350px) and (max-width: 599px) {
+    .nav-encabezado {
+        .encabezado-cuerpo {
+            .mi-navbar {
+                .lista-enlaces {
+                    .enlace a {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 349px) {
+    .nav-encabezado {
+        .encabezado-cuerpo {
+            .mi-navbar {
+                .lista-enlaces {
+                    .enlace a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

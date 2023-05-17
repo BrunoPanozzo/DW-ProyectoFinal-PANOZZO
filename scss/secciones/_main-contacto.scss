@@ -1,0 +1,241 @@
+.titulos {
+    .titulo-importante5 {
+        text-align: left;
+        // font-style: normal;
+        // font-weight: bold;
+        // font-size: 30px;
+        // font-family: $fontTitulo2;
+        @include mySpecialFont (normal, bold, 30px, $fontTitulo2);
+
+        color: white;
+        margin: 10px;
+    }
+
+    .formularioContacto {
+        background-color: $myColorContenedor;
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        // display: flex;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        // justify-content: baseline;
+        // align-items: flex-start;
+        // align-content: space-between;
+        @include myflex (column, baseline, flex-start, space-between);
+
+        .formularioContacto__dato {
+            // display: flex;
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            // justify-content:space-around;
+            // align-items:baseline;   
+            // align-content: space-around;        
+            @include myflex (row, space-around, baseline, space-around);
+
+            padding: 15px;
+            margin: 5px;
+
+            .formularioContacto__dato--lbl-form {
+                padding-right: 20px;
+            }
+        }
+
+        .formularioContacto__opcional textarea {
+            background-color: lightpink;
+            // font-size: 20px;
+            // font-family: $fontTitulo2;
+            @include mySpecialFont (null, null, 20px, $fontTitulo2);
+        }
+
+        .formularioContacto__obligatorio input {
+            background-color: lightpink;
+            // font-size: 20px;
+            // font-family: $fontTitulo2;
+            @include mySpecialFont (null, null, 20px, $fontTitulo2);
+        }
+
+        .formularioContacto__obligatorio select {
+            background-color: lightpink;
+            // font-size: 20px;
+            // font-family: $fontTitulo2;
+            @include mySpecialFont (null, null, 20px, $fontTitulo2);
+        }
+
+        .formularioContacto__opcional input {
+            background-color: lightsalmon;
+            font-size: 20px;
+        }
+
+        .formularioContacto__btnEnviar {
+            padding: 15px;
+            margin: 5px;
+        }
+    }
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 450px) and (max-width: 600px) {
+    .titulos {
+        .titulo-importante1 {
+            font-size: 50px;
+        }
+
+        .titulo-importante5 {
+            font-size: 20px;
+        }
+
+        .formularioContacto {
+            .formularioContacto__dato {
+                padding: 15px;
+                margin: 5px;
+
+                .formularioContacto__dato--lbl-form {
+                    font-size: 25px;
+                }
+            }
+
+            .formularioContacto__btnEnviar {
+                font-size: 25px;
+                padding: 15px;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+@media (min-width: 386px) and (max-width: 449px) {
+    .titulos {
+        .titulo-importante1 {
+            font-size: 40px;
+        }
+
+        .titulo-importante5 {
+            font-size: 20px;
+        }
+
+        .formularioContacto {
+            .formularioContacto__opcional textarea {
+                font-size: 20px;
+            }
+
+            .formularioContacto__obligatorio input {
+                font-size: 20px;
+            }
+
+            .formularioContacto__obligatorio select {
+                font-size: 20px;
+            }
+
+            .formularioContacto__opcional input {
+                font-size: 20px;
+            }
+
+            .formularioContacto__dato {
+                padding: 15px;
+                margin: 5px;
+
+                .formularioContacto__dato--lbl-form {
+                    font-size: 20px;
+                }
+            }
+
+            .formularioContacto__btnEnviar {
+                font-size: 20px;
+                padding: 15px;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 350px) and (max-width: 385px) {
+    .titulos {
+        .titulo-importante1 {
+            font-size: 35px;
+        }
+
+        .titulo-importante5 {
+            font-size: 15px;
+        }
+
+        .formularioContacto {
+            .formularioContacto__opcional textarea {
+                font-size: 15px;
+            }
+
+            .formularioContacto__obligatorio input {
+                font-size: 15px;
+            }
+
+            .formularioContacto__obligatorio select {
+                font-size: 15px;
+            }
+
+            .formularioContacto__opcional input {
+                font-size: 15px;
+            }
+
+            .formularioContacto__dato {
+                padding: 15px;
+                margin: 5px;
+
+                .formularioContacto__dato--lbl-form {
+                    font-size: 15px;
+                }
+            }
+
+            .titulos .formularioContacto .formularioContacto__btnEnviar {
+                font-size: 15px;
+                padding: 15px;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .titulos {
+        .titulo-importante1 {
+            font-size: 30px;
+        }
+
+        .titulo-importante5 {
+            font-size: 13px;
+        }
+
+        .formularioContacto {
+            .formularioContacto__opcional textarea {
+                font-size: 12px;
+            }
+
+            .formularioContacto__obligatorio input {
+                font-size: 12px;
+            }
+
+            .formularioContacto__obligatorio select {
+                font-size: 12px;
+            }
+
+            .formularioContacto__opcional input {
+                font-size: 12px;
+            }
+
+            .formularioContacto__dato {
+                padding: 10px;
+                margin: 5px;
+
+                .formularioContacto__dato--lbl-form {
+                    font-size: 12px;
+                }
+            }
+
+            .formularioContacto__btnEnviar {
+                font-size: 12px;
+                padding: 10px;
+                margin: 5px;
+            }
+        }
+    }
+}

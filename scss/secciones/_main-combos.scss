@@ -1,0 +1,297 @@
+.combos {
+    background-color: $myColorContenedor;
+    min-height: 70vh;
+
+    .titulo-importante1 {
+        // font-size: 80px;
+        // font-family: $fontTitulo;
+        // font-weight: bold;
+        @include mySpecialFont (null, bold, 80px, $fontTitulo);
+
+        // text-align: left;
+        // color: $myColor;
+        // margin: 50px;
+        // padding-top: 30px;
+        @extend .config-titulo-importante1;
+    }
+
+    .contenedor-combos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "film1 film2"
+            "film3 film4"
+        ;
+        height: 600px;
+
+        // margin: 25px auto;
+        // width: 1600px;
+        // background-color: white;
+        // box-shadow: 0 0 20px rgba(0, 0, 0, 0.401);
+        @extend .configBasica_GridPage;
+
+        .film1 {
+            grid-area: film1;
+        }
+
+        .film2 {
+            grid-area: film2;
+        }
+
+        .film3 {
+            grid-area: film3;
+        }
+
+        .film4 {
+            grid-area: film4;
+        }
+
+        .film {
+            .imgfilm {
+                float: left;
+                margin: 5px;
+                // background-position: center;
+                // background-size: cover;
+                // background-repeat: no-repeat;
+                @include configImagen;
+
+                transition: 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .info-combo {
+                .titulo-importante4 {
+                    // font-style: normal;
+                    // font-weight: bold;
+                    // font-size: 30px;
+                    // font-family: $fontTitulo2;
+                    @include mySpecialFont (normal, bold, 30px, $fontTitulo2);
+
+                    // text-align: left;
+                    // color: rgb(227, 10, 10);
+                    // margin: 10px;
+                    @extend .config-titulo-importante4;
+                }
+
+                .disponible-combo {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+/* MEDIA QUERIES*/
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .combos {
+        .titulo-importante1 {
+            font-size: 70px;
+        }
+
+        .contenedor-combos {
+            width: 1400px;
+            height: auto;
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .combos {
+        .titulo-importante1 {
+            font-size: 70px;
+        }
+
+        .contenedor-combos {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "film1"
+                "film2"
+                "film3"
+                "film4"
+            ;
+            width: 1200px;
+            height: auto;
+        }
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 1199px) {
+    .combos {
+        .titulo-importante1 {
+            font-size: 60px;
+        }
+
+        .contenedor-combos {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "film1"
+                "film2"
+                "film3"
+                "film4"
+            ;
+            width: 600px;
+            height: auto;
+
+            .film .imgfilm {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 599px) {
+    .combos {
+        .titulo-importante1 {
+            font-size: 50px;
+        }
+
+        .contenedor-combos {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "film1"
+                "film2"
+                "film3"
+                "film4"
+            ;
+            width: 400px;
+            height: auto;
+
+            .film {
+                .imgfilm {
+                    max-width: 300px;
+                }
+
+                .info-combo {
+                    .titulo-importante4 {
+                        font-size: 25px;
+                    }
+
+                    .disponible-combo {
+                        font-size: 15x;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 350px) and (max-width: 399px) {
+    .combos {
+        .titulo-importante1 {
+            font-size: 50px;
+        }
+
+        .contenedor-combos {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "film1"
+                "film2"
+                "film3"
+                "film4"
+            ;
+            width: 300px;
+            height: auto;
+
+            .film {
+                .imgfilm {
+                    max-width: 200px;
+                }
+
+                .info-combo {
+                    .titulo-importante4 {
+                        font-size: 25px;
+                    }
+
+                    .disponible-combo {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 349px) {
+    .combos {
+        .titulo-importante1 {
+            font-size: 40px;
+        }
+
+        .contenedor-combos {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "film1"
+                "film2"
+                "film3"
+                "film4"
+            ;
+            width: 300px;
+            height: auto;
+
+            .film {
+                .imgfilm {
+                    max-width: 200px;
+                }
+
+                .info-combo {
+                    .titulo-importante4 {
+                        font-size: 25px;
+                    }
+
+                    .disponible-combo {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 299px) {
+    .combos {
+        .titulo-importante1 {
+            font-size: 30px;
+        }
+
+        .contenedor-combos {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "film1"
+                "film2"
+                "film3"
+                "film4"
+            ;
+            width: 230px;
+            height: auto;
+
+            .film {
+                .imgfilm {
+                    max-width: 200px;
+                }                              
+                
+                .info-combo {
+                    .titulo-importante4 {
+                        font-size: 25px;
+                    }
+                    .disponible-combo {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

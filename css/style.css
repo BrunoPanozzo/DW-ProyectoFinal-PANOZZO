@@ -145,7 +145,58 @@
   flex-wrap: wrap;
   justify-content: baseline;
   align-items: center;
-  align-content: space-between; }
+  align-content: space-between;
+  position: relative; }
+  .titulos .banner {
+    width: 960px;
+    height: 363px;
+    /* centrar vertical y horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .titulos .banner .carousel-inner .carousel-item .carousel-item1 {
+      height: 363px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("/recursos/inicio/banner/festeja tu cumple.jpg");
+      display: block; }
+    .titulos .banner .carousel-inner .carousel-item .carousel-item2 {
+      height: 363px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("/recursos/inicio/banner/guardianes de la galavia v3.jpg");
+      display: block; }
+    .titulos .banner .carousel-inner .carousel-item .carousel-item3 {
+      height: 363px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("/recursos/inicio/banner/fast x.jpg");
+      display: block; }
+    .titulos .banner .carousel-inner .carousel-item .carousel-item4 {
+      height: 363px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("/recursos/inicio/banner/la sirenita.jpg");
+      display: block; }
+    .titulos .banner .carousel-inner .carousel-item .carousel-item5 {
+      height: 363px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("/recursos/inicio/banner/promociones.jpg");
+      display: block; }
+    .titulos .banner .carousel-inner .carousel-item .carousel-item6 {
+      height: 363px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("/recursos/inicio/banner/descuentos.jpg");
+      display: block; }
   .titulos .titulo-importante1 {
     font-weight: bold;
     font-size: 80px;

@@ -254,35 +254,35 @@
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          background-image: url(/recursos/inicio/banner/guardianes_de_la_galavia_v3.jpg);
+          background-image: url(recursos/inicio/banner/guardianes_de_la_galavia_v3.jpg);
           background-size: contain; }
         .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item3 {
           height: 363px;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          background-image: url(/recursos/inicio/banner/fast_x.jpg);
+          background-image: url(recursos/inicio/banner/fast_x.jpg);
           background-size: contain; }
         .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item4 {
           height: 363px;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          background-image: url(/recursos/inicio/banner/la_sirenita.jpg);
+          background-image: url(recursos/inicio/banner/la_sirenita.jpg);
           background-size: contain; }
         .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item5 {
           height: 363px;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          background-image: url(/recursos/inicio/banner/promociones.jpg);
+          background-image: url(recursos/inicio/banner/promociones.jpg);
           background-size: contain; }
         .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item6 {
           height: 363px;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          background-image: url(/recursos/inicio/banner/descuentos.jpg);
+          background-image: url(recursos/inicio/banner/descuentos.jpg);
           background-size: contain; }
   .homepage .bloque-mas-info {
     display: flex;

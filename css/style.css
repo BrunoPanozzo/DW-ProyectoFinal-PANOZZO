@@ -246,9 +246,7 @@
           height: 363px;
           background-position: center;
           background-size: cover;
-          background-repeat: no-repeat;
-          background-image: url(/recursos/inicio/banner/festejaTuCumple.jpg);
-          background-size: contain; }
+          background-repeat: no-repeat; }
         .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item2 {
           height: 363px;
           background-position: center;

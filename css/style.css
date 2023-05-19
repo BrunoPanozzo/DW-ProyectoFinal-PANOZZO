@@ -234,7 +234,7 @@
       grid-area: bloque2;
       height: auto;
       /* centrar vertical y horizontalmente */
-      background-image: url(recursos/inicio/portadaCine.jpg);
+      background-image: url("../recursos/inicio/portadaCine.jpg");
       background-color: #c04338;
       background-position: center;
       background-size: cover;
@@ -242,48 +242,13 @@
       .homepage .bloque-contenido .banner .carousel-inner {
         margin-top: 150px;
         margin-bottom: 150px; }
-        .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item1 {
+        .homepage .bloque-contenido .banner .carousel-inner .carousel-item {
+          padding-left: 125px;
+          padding-right: 125px;
           height: 363px;
           background-position: center;
           background-size: cover;
-          background-repeat: no-repeat;
-          background-image: url(recursos/inicio/banner/festejaTuCumple.jpg);
-          background-size: contain; }
-        .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item2 {
-          height: 363px;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-image: url(recursos/inicio/banner/guardianes_de_la_galavia_v3.jpg);
-          background-size: contain; }
-        .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item3 {
-          height: 363px;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-image: url(recursos/inicio/banner/fast_x.jpg);
-          background-size: contain; }
-        .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item4 {
-          height: 363px;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-image: url(recursos/inicio/banner/la_sirenita.jpg);
-          background-size: contain; }
-        .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item5 {
-          height: 363px;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-image: url(recursos/inicio/banner/promociones.jpg);
-          background-size: contain; }
-        .homepage .bloque-contenido .banner .carousel-inner .carousel-item .carousel-item6 {
-          height: 363px;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-image: url(recursos/inicio/banner/descuentos.jpg);
-          background-size: contain; }
+          background-repeat: no-repeat; }
   .homepage .bloque-mas-info {
     display: flex;
     flex-direction: row;

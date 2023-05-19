@@ -76,9 +76,8 @@
             // left: 50%;
             // transform: translate(-50%, -50%);
             // margin-top: 150px;
-            background-image: url(recursos/inicio/portadaCine.jpg);
+            background-image: url("../recursos/inicio/portadaCine.jpg");
             background-color: $myColorContenedor;
-
             @include configImagen;
 
             .carousel-inner {
@@ -86,48 +85,10 @@
                 margin-bottom: 150px;
 
                 .carousel-item {
-
-                    .carousel-item1 {
-                        height: 363px;
-                        @include configImagen;
-                        background-image: url(recursos/inicio/banner/festejaTuCumple.jpg);
-                        background-size: contain;
-                    }
-
-                    .carousel-item2 {
-                        height: 363px;
-                        @include configImagen;
-                        background-image: url(recursos/inicio/banner/guardianes_de_la_galavia_v3.jpg);
-                        background-size: contain;
-                    }
-
-                    .carousel-item3 {
-                        height: 363px;
-                        @include configImagen;
-                        background-image: url(recursos/inicio/banner/fast_x.jpg);
-                        background-size: contain;
-                    }
-
-                    .carousel-item4 {
-                        height: 363px;
-                        @include configImagen;
-                        background-image: url(recursos/inicio/banner/la_sirenita.jpg);
-                        background-size: contain;
-                    }
-
-                    .carousel-item5 {
-                        height: 363px;
-                        @include configImagen;
-                        background-image: url(recursos/inicio/banner/promociones.jpg);
-                        background-size: contain;
-                    }
-
-                    .carousel-item6 {
-                        height: 363px;
-                        @include configImagen;
-                        background-image: url(recursos/inicio/banner/descuentos.jpg);
-                        background-size: contain; 
-                    }
+                    padding-left: 125px;
+                    padding-right: 125px;
+                    height: 363px;
+                    @include configImagen;
                 }
             }
         }

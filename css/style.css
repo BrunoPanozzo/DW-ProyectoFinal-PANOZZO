@@ -118,8 +118,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center; }
+  align-items: flex-start;
+  align-content: flex-start; }
   .pie .bloque-footer {
     display: flex;
     flex-direction: row;

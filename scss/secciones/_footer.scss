@@ -11,7 +11,7 @@
     // justify-content: center;
     // align-items: flex-start;
     // align-content: space-between;   
-    @include myflex (column, center, center, center);
+    @include myflex (column, center, flex-start, flex-start);
 
     .bloque-footer {
         @include myflex (row, flex-start, flex-start, space-between);

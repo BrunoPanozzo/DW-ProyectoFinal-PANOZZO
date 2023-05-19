@@ -1,4 +1,18 @@
 .titulos {
+    background-color: $myColorContenedor;
+    min-height: 70vh;
+    .titulo-importante1 {
+        // font-size: 80px;
+        // font-family: $fontTitulo;
+        // font-weight: bold;
+        @include mySpecialFont (null, bold, 80px, $fontTitulo);
+
+        // text-align: left;
+        // color: $myColor;
+        // margin: 50px;
+        // padding-top: 30px;
+        @extend .config-titulo-importante1;
+    }
     .titulo-importante5 {
         text-align: left;
         // font-style: normal;

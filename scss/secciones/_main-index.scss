@@ -1,278 +1,735 @@
-/*MAIN INDEX*/
-.titulos {
-    background-image: url("../recursos/inicio/portadaCine.jpg");
-    min-height: 70vh;
-    height: auto;
-    // background-repeat: no-repeat;
-    // background-size:cover;
-    // background-position: center; 
-    @include configImagen;
+.homepage {
+    // background-image: url("../recursos/inicio/portadaCine.jpg");
+    // height: auto;
+    // // background-repeat: no-repeat;
+    // // background-size:cover;
+    // // background-position: center; 
+    // @include configImagen;
 
-    // display: flex;
-    // flex-direction: column;
-    // flex-wrap: wrap;
-    // justify-content: baseline;
-    // align-items: center;
-    // align-content: space-between;
-    @include myflex (column, baseline, center, space-between);
+    // // display: flex;
+    // // flex-direction: column;
+    // // flex-wrap: wrap;
+    // // justify-content: baseline;
+    // // align-items: center;
+    // // align-content: space-between;
+    //  @include myflex (column, baseline, center, space-between);
 
-    // overflow: hidden;
+    // // overflow: hidden;
+    // // position: relative;
+    // // .img-fondo {
+    // //     opacity: 0;
+    // //     position: absolute;
+    // //     left: 0;
+    // //     top: 0;
+    // //     width: 100%;
+    // //     height: auto;
+    // // }
     // position: relative;
-    // .img-fondo {
-    //     opacity: 0;
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     width: 100%;
-    //     height: auto;
-    // }
-    position: relative;
+    background-color: $myColorContenedor;
+    min-height: 70vh;
 
-    .banner {
-        width: 960px;
-        height: 363px;
-        /* centrar vertical y horizontalmente */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .bloque-contenido {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "bloque1 bloque2 bloque2 bloque3"
+        ;
+        // height: 1000px;
+        min-height: 50vh;
+        // margin: 25px auto;
+        // width: 1600px;
+        // background-color: white;
+        // box-shadow: 0 0 20px rgba(0, 0, 0, 0.401);
+        @extend .configBasica_GridPage;
+        width: auto;
 
-        .carousel-inner {
-            .carousel-item {
-                .carousel-item1 {
-                    height: 363px;
-                    @include configImagen;
-                    background-image: url("/recursos/inicio/banner/festeja tu cumple.jpg");
-                    display: block;
-                }
+        .imagen-portada-izq {
+            grid-area: bloque1;
+            background-image: url("../recursos/inicio/transformers.jpg");
+            // min-width: 35vh;
+            // min-height: 50vh;
+            // background-repeat: no-repeat;
+            // background-size:cover;
+            // background-position: center; 
+            @include configImagen;
+        }
 
-                .carousel-item2 {
-                    height: 363px;
-                    @include configImagen;
-                    background-image: url("/recursos/inicio/banner/guardianes de la galavia v3.jpg");
-                    display: block;
+        .imagen-portada-der {
+            grid-area: bloque3;
+            background-image: url("../recursos/inicio/spiderman.jpg");
+            // min-width: 35vh;
+            // min-height: 50vh;
+            // background-repeat: no-repeat;
+            // background-size:cover;
+            // background-position: center; 
+            @include configImagen;
+        }
 
-                }
+        .banner {
+            grid-area: bloque2;
+            // width: 960px;
+            height: auto;
+            /* centrar vertical y horizontalmente */
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            // margin-top: 150px;
+            background-image: url("../recursos/inicio/portadaCine.jpg");
+            @include configImagen;
 
-                .carousel-item3 {
-                    height: 363px;
-                    @include configImagen;
-                    background-image: url("/recursos/inicio/banner/fast x.jpg");
-                    display: block;
+            .carousel-inner {
+                margin-top: 150px;
+                margin-bottom: 150px;
 
-                }
+                .carousel-item {
+                    .carousel-item1 {
+                        height: 363px;
+                        @include configImagen;
+                        background-image: url("/recursos/inicio/banner/festeja tu cumple.jpg");
+                        background-size: contain;
+                    }
 
-                .carousel-item4 {
-                    height: 363px;
-                    @include configImagen;
-                    background-image: url("/recursos/inicio/banner/la sirenita.jpg");
-                    display: block;
+                    .carousel-item2 {
+                        height: 363px;
+                        @include configImagen;
+                        background-image: url("/recursos/inicio/banner/guardianes de la galavia v3.jpg");
+                        background-size: contain;
+                    }
 
-                }
+                    .carousel-item3 {
+                        height: 363px;
+                        @include configImagen;
+                        background-image: url("/recursos/inicio/banner/fast x.jpg");
+                        background-size: contain;
+                    }
 
-                .carousel-item5 {
-                    height: 363px;
-                    @include configImagen;
-                    background-image: url("/recursos/inicio/banner/promociones.jpg");
-                    display: block;
+                    .carousel-item4 {
+                        height: 363px;
+                        @include configImagen;
+                        background-image: url("/recursos/inicio/banner/la sirenita.jpg");
+                        background-size: contain;
+                    }
 
-                }
+                    .carousel-item5 {
+                        height: 363px;
+                        @include configImagen;
+                        background-image: url("/recursos/inicio/banner/promociones.jpg");
+                        background-size: contain;
+                    }
 
-                .carousel-item6 {
-                    height: 363px;
-                    @include configImagen;
-                    background-image: url("/recursos/inicio/banner/descuentos.jpg");
-                    display: block;
-
+                    .carousel-item6 {
+                        height: 363px;
+                        @include configImagen;
+                        background-image: url("/recursos/inicio/banner/descuentos.jpg");
+                        background-size: contain;
+                    }
                 }
             }
         }
     }
 
-    .titulo-importante1 {
-        // font-size: 80px;
-        // font-family: $fontTitulo;
-        // font-weight: bold;
-        @include mySpecialFont (null, bold, 80px, $fontTitulo);
+    .bloque-mas-info {
+        @include myflex (row, space-evenly, center, center);
+        min-height: 20vh;
 
-        // text-align: left;
-        // color: $myColor;
-        // margin: 50px;
-        // padding-top: 30px;
-        @extend .config-titulo-importante1;
-    }
+        .textos-varios {
+            .titulo-importante1 {
+                // font-size: 80px;
+                // font-family: $fontTitulo;
+                // font-weight: bold;
+                @include mySpecialFont (null, bold, 80px, $fontTitulo);
 
-    .titulo-importante2 {
-        text-align: left;
-        // font-size: 60px;
-        // font-family: $fontTitulo;
-        @include mySpecialFont (null, null, 60px, $fontTitulo);
+                // text-align: left;
+                // color: $myColor;
+                // margin: 50px;
+                // padding-top: 30px;
+                @extend .config-titulo-importante1;
+            }
 
-        text-decoration: underline;
-        color: $myColor;
-        margin: 50px;
-    }
+            .titulo-importante2 {
+                text-align: left;
+                // font-size: 60px;
+                // font-family: $fontTitulo;
+                @include mySpecialFont (null, null, 60px, $fontTitulo);
 
-    .titulo-importante3 {
-        text-align: left;
-        // font-style: normal;
-        // font-size: 50px;
-        // font-family: $fontTitulo2;
-        @include mySpecialFont (normal, null, 50px, $fontTitulo2);
+                text-decoration: underline;
+                color: $myColor;
+                margin: 50px;
+            }
 
-        color: rgb(235, 210, 25);
-        margin: 50px;
-    }
+            .titulo-importante3 {
+                text-align: left;
+                // font-style: normal;
+                // font-size: 50px;
+                // font-family: $fontTitulo2;
+                @include mySpecialFont (normal, null, 50px, $fontTitulo2);
 
-    .contenedor-lista-animada {
-        display: flex;
-        // width: 300px;
-        height: 40px;
-        color: #fff;
-        font-size: 40px;
-        line-height: 40px;
-        // position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        overflow: hidden;
+                color: rgb(235, 210, 25);
+                margin: 50px;
+            }
 
-        .lista-animada {
-            list-style: none;
-            padding-left: 10px;
-            animation: cambiar 10s infinite;
+            .contenedor-lista-animada {
+                display: flex;
+                // width: 300px;
+                height: 40px;
+                color: #fff;
+                font-size: 40px;
+                line-height: 40px;
+                // position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                overflow: hidden;
+                margin-bottom: 35px;
+
+                .lista-animada {
+                    list-style: none;
+                    padding-left: 50px;
+                    animation: cambiar 10s infinite;
+                }
+            }
+        }
+
+        .imagenes-mas-info {
+            padding: 20px;
         }
     }
 }
 
 /* MEDIA QUERIES*/
 
-@media (min-width: 1400px) and (max-width: 1600px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 70px;
-        }
+// @media (min-width: 1600px) and (max-width: 1800px) {
+//     .homepage {
+//         .bloque-contenido {
+//             max-width: 1600px;
 
-        .titulo-importante2 {
-            font-size: 50px;
-        }
+//             .imagen-portada-izq {
+//                 max-width: 320px;
+//             }
 
-        .titulo-importante3 {
-            font-size: 40px;
-        }
-    }
-}
+//             .imagen-portada-der {
+//                 max-width: 320px;
+
+//             }
+
+//             .banner {
+//                 max-width: 960px;
+
+//             }
+//         }
+
+//         .bloque-mas-info {
+//             .textos-varios {
+//                 .titulo-importante1 {
+//                     font-size: 70px;
+//                 }
+
+//                 .titulo-importante2 {
+//                     font-size: 50px;
+//                 }
+
+//                 .titulo-importante3 {
+//                     font-size: 40px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width: 1400px) and (max-width: 1599px) {
+//     .homepage {
+//         .bloque-contenido {
+//             width: 1400px;
+//         }
+//         .imagen-portada-izq {
+//             width: 220px;
+//         }
+
+//         .imagen-portada-der {
+//             width: 220px;
+
+//         }
+
+//         .banner {
+//             width: 960px;
+
+//         }
+
+//         .bloque-mas-info {
+//             .textos-varios {
+//                 .titulo-importante1 {
+//                     font-size: 70px;
+//                 }
+
+//                 .titulo-importante2 {
+//                     font-size: 50px;
+//                 }
+
+//                 .titulo-importante3 {
+//                     font-size: 40px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 70px;
+    .homepage {
+        .bloque-contenido {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                "bloque1 bloque2 bloque2 bloque3"
+            ;
+
+            .imagen-portada-izq {
+                @include configImagen;
+            }
+
+            .imagen-portada-der {
+                @include configImagen;
+            }
+
+            .banner {
+                @include configImagen;
+
+                .carousel-inner {
+                    margin-top: 150px;
+                    margin-bottom: 150px;
+
+                    .carousel-item {
+                        .carousel-item1 {
+                            height: 363px;
+                        }
+
+                        .carousel-item2 {
+                            height: 363px;
+                        }
+
+                        .carousel-item3 {
+                            height: 363px;
+                        }
+
+                        .carousel-item4 {
+                            height: 363px;
+                        }
+
+                        .carousel-item5 {
+                            height: 363px;
+                        }
+
+                        .carousel-item6 {
+                            height: 363px;
+                        }
+                    }
+                }
+            }
         }
 
-        .titulo-importante2 {
-            font-size: 50px;
-        }
+        .bloque-mas-info {
+            .textos-varios {
+                .titulo-importante1 {
+                    font-size: 70px;
+                }
 
-        .titulo-importante3 {
-            font-size: 40px;
+                .titulo-importante2 {
+                    font-size: 50px;
+                }
+
+                .titulo-importante3 {
+                    font-size: 40px;
+                }
+            }
         }
     }
 }
 
 @media (min-width: 600px) and (max-width: 1199px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 60px;
+    .homepage {
+
+        .bloque-contenido {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                "bloque1 bloque2 bloque2 bloque3"
+            ;
+
+            .imagen-portada-izq {
+                @include configImagen;
+            }
+
+            .imagen-portada-der {
+                @include configImagen;
+            }
+
+            .banner {
+                @include configImagen;
+
+                .carousel-inner {
+                    margin-top: 150px;
+                    margin-bottom: 150px;
+
+                    .carousel-item {
+                        .carousel-item1 {
+                            height: 363px;
+                        }
+
+                        .carousel-item2 {
+                            height: 363px;
+                        }
+
+                        .carousel-item3 {
+                            height: 363px;
+                        }
+
+                        .carousel-item4 {
+                            height: 363px;
+                        }
+
+                        .carousel-item5 {
+                            height: 363px;
+                        }
+
+                        .carousel-item6 {
+                            height: 363px;
+                        }
+                    }
+                }
+            }
         }
 
-        .titulo-importante2 {
-            font-size: 40px;
-        }
+        .bloque-mas-info {
+            .textos-varios {
+                .titulo-importante1 {
+                    font-size: 60px;
+                }
 
-        .titulo-importante3 {
-            font-size: 30px;
+                .titulo-importante2 {
+                    font-size: 40px;
+                }
+
+                .titulo-importante3 {
+                    font-size: 30px;
+                }
+            }
         }
     }
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 60px;
+    .homepage {
+
+        .bloque-contenido {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                "bloque1 bloque2 bloque2 bloque3"
+            ;
+
+            .imagen-portada-izq {
+                @include configImagen;
+            }
+
+            .imagen-portada-der {
+                @include configImagen;
+            }
+
+            .banner {
+                @include configImagen;
+
+                .carousel-inner {
+                    margin-top: 150px;
+                    margin-bottom: 150px;
+
+                    .carousel-item {
+                        .carousel-item1 {
+                            height: 363px;
+                        }
+
+                        .carousel-item2 {
+                            height: 363px;
+                        }
+
+                        .carousel-item3 {
+                            height: 363px;
+                        }
+
+                        .carousel-item4 {
+                            height: 363px;
+                        }
+
+                        .carousel-item5 {
+                            height: 363px;
+                        }
+
+                        .carousel-item6 {
+                            height: 363px;
+                        }
+                    }
+                }
+            }
         }
 
-        .titulo-importante2 {
-            font-size: 40px;
-        }
+        .bloque-mas-info {
+            .textos-varios {
+                .titulo-importante1 {
+                    font-size: 60px;
+                }
 
-        .titulo-importante3 {
-            font-size: 30px;
-        }
+                .titulo-importante2 {
+                    font-size: 40px;
+                }
 
-        .contenedor-lista-animada {
-            font-size: 35px;
+                .titulo-importante3 {
+                    font-size: 30px;
+                }
+
+                .contenedor-lista-animada {
+                    font-size: 35px;
+                }
+            }
         }
     }
 }
 
 @media (min-width: 386px) and (max-width: 499px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 50px;
+    .homepage {
+
+        .bloque-contenido {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                "bloque1 bloque2 bloque2 bloque3"
+            ;
+
+            .imagen-portada-izq {
+                @include configImagen;
+            }
+
+            .imagen-portada-der {
+                @include configImagen;
+            }
+
+            .banner {
+                @include configImagen;
+
+                .carousel-inner {
+                    margin-top: 150px;
+                    margin-bottom: 150px;
+
+                    .carousel-item {
+                        .carousel-item1 {
+                            height: 363px;
+                        }
+
+                        .carousel-item2 {
+                            height: 363px;
+                        }
+
+                        .carousel-item3 {
+                            height: 363px;
+                        }
+
+                        .carousel-item4 {
+                            height: 363px;
+                        }
+
+                        .carousel-item5 {
+                            height: 363px;
+                        }
+
+                        .carousel-item6 {
+                            height: 363px;
+                        }
+                    }
+                }
+            }
         }
 
-        .titulo-importante2 {
-            font-size: 30px;
-        }
+        .bloque-mas-info {
+            .textos-varios {
+                .titulo-importante1 {
+                    font-size: 50px;
+                }
 
-        .titulo-importante3 {
-            font-size: 20px;
-        }
+                .titulo-importante2 {
+                    font-size: 30px;
+                }
 
-        .contenedor-lista-animada {
-            font-size: 30px;
+                .titulo-importante3 {
+                    font-size: 20px;
+                }
+
+                .contenedor-lista-animada {
+                    font-size: 30px;
+                }
+            }
         }
     }
 }
 
 @media (min-width: 350px) and (max-width: 385px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 50px;
+    .homepage {
+
+        .bloque-contenido {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                "bloque1 bloque2 bloque2 bloque3"
+            ;
+
+            .imagen-portada-izq {
+                @include configImagen;
+            }
+
+            .imagen-portada-der {
+                @include configImagen;
+            }
+
+            .banner {
+                @include configImagen;
+
+                .carousel-inner {
+                    margin-top: 150px;
+                    margin-bottom: 150px;
+
+                    .carousel-item {
+                        .carousel-item1 {
+                            height: 363px;
+                        }
+
+                        .carousel-item2 {
+                            height: 363px;
+                        }
+
+                        .carousel-item3 {
+                            height: 363px;
+                        }
+
+                        .carousel-item4 {
+                            height: 363px;
+                        }
+
+                        .carousel-item5 {
+                            height: 363px;
+                        }
+
+                        .carousel-item6 {
+                            height: 363px;
+                        }
+                    }
+                }
+            }
         }
 
-        .titulo-importante2 {
-            font-size: 30px;
-        }
+        .bloque-mas-info {
+            .textos-varios {
+                .titulo-importante1 {
+                    font-size: 50px;
+                }
 
-        .titulo-importante3 {
-            font-size: 20px;
-        }
+                .titulo-importante2 {
+                    font-size: 30px;
+                }
 
-        .contenedor-lista-animada {
-            font-size: 25px;
+                .titulo-importante3 {
+                    font-size: 20px;
+                }
+
+                .contenedor-lista-animada {
+                    font-size: 25px;
+                }
+            }
         }
     }
 }
 
 @media (max-width: 349px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 40px;
+    .homepage {
+
+        .bloque-contenido {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                "bloque1 bloque2 bloque2 bloque3"
+            ;
+
+            .imagen-portada-izq {
+                @include configImagen;
+            }
+
+            .imagen-portada-der {
+                @include configImagen;
+            }
+
+            .banner {
+                @include configImagen;
+
+                .carousel-inner {
+                    margin-top: 150px;
+                    margin-bottom: 150px;
+
+                    .carousel-item {
+                        .carousel-item1 {
+                            height: 363px;
+                        }
+
+                        .carousel-item2 {
+                            height: 363px;
+                        }
+
+                        .carousel-item3 {
+                            height: 363px;
+                        }
+
+                        .carousel-item4 {
+                            height: 363px;
+                        }
+
+                        .carousel-item5 {
+                            height: 363px;
+                        }
+
+                        .carousel-item6 {
+                            height: 363px;
+                        }
+                    }
+                }
+            }
         }
 
-        .titulo-importante2 {
-            font-size: 30px;
-        }
+        .bloque-mas-info {
+            .textos-varios {
+                .titulo-importante1 {
+                    font-size: 40px;
+                }
 
-        .titulo-importante3 {
-            font-size: 20px;
-        }
+                .titulo-importante2 {
+                    font-size: 30px;
+                }
 
-        .contenedor-lista-animada {
-            font-size: 20px;
+                .titulo-importante3 {
+                    font-size: 20px;
+                }
+
+                .contenedor-lista-animada {
+                    font-size: 20px;
+
+                    .lista-animada {
+                        padding-left: 25px;
+                    }
+                }
+            }
         }
     }
 }

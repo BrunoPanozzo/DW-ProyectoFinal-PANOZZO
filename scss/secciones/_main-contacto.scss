@@ -1,6 +1,10 @@
 .titulos {
     background-color: $myColorContenedor;
+    background-image: url("../recursos/contacto/fondoContacto.jpg");
+    @include configImagen;
     min-height: 70vh;
+    padding-bottom: 50px;
+
     .titulo-importante1 {
         // font-size: 80px;
         // font-family: $fontTitulo;
@@ -12,7 +16,10 @@
         // margin: 50px;
         // padding-top: 30px;
         @extend .config-titulo-importante1;
+
+        padding-left: 100px;
     }
+
     .titulo-importante5 {
         text-align: left;
         // font-style: normal;
@@ -22,21 +29,28 @@
         @include mySpecialFont (normal, bold, 30px, $fontTitulo2);
 
         color: white;
-        margin: 10px;
+        margin-left: 150px;
+
+        &:hover {
+            text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+        }
     }
 
     .formularioContacto {
-        background-color: $myColorContenedor;
-        font-size: 30px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        padding: 30px;
+        margin-left: 150px;
+        border: #cab38534 solid 8px;
+        border-radius: 15px;
+        background-color: #f3dab527;
+        width: 500px;
+
         // display: flex;
         // flex-direction: column;
         // flex-wrap: wrap;
         // justify-content: baseline;
         // align-items: flex-start;
         // align-content: space-between;
-        @include myflex (column, baseline, flex-start, space-between);
+        @include myflex (column, baseline, flex-end, space-between);
 
         .formularioContacto__dato {
             // display: flex;
@@ -45,210 +59,118 @@
             // justify-content:space-around;
             // align-items:baseline;   
             // align-content: space-around;        
-            @include myflex (row, space-around, baseline, space-around);
+            @include myflex (row, null, center, null);
 
-            padding: 15px;
-            margin: 5px;
+            .formularioContacto__dato--lblForm {
+                text-shadow: 1px 1px 2px black;
+                @extend .configTextoForm;
 
-            .formularioContacto__dato--lbl-form {
-                padding-right: 20px;
+                &:hover {
+                    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+                    font-size: 18px;
+                }
+            }
+
+            .formularioContacto__dato--inputForm {
+                @extend .configInputForm;
+
+                &:focus {
+                    @extend .focusSombreadoInputForm;
+                }
+            }
+
+            textarea {
+                height: 200px;
             }
         }
 
         .formularioContacto__opcional textarea {
-            background-color: lightpink;
-            // font-size: 20px;
-            // font-family: $fontTitulo2;
-            @include mySpecialFont (null, null, 20px, $fontTitulo2);
-        }
-
-        .formularioContacto__obligatorio input {
-            background-color: lightpink;
-            // font-size: 20px;
-            // font-family: $fontTitulo2;
-            @include mySpecialFont (null, null, 20px, $fontTitulo2);
-        }
-
-        .formularioContacto__obligatorio select {
-            background-color: lightpink;
-            // font-size: 20px;
-            // font-family: $fontTitulo2;
-            @include mySpecialFont (null, null, 20px, $fontTitulo2);
+            background-color: lightsalmon;
         }
 
         .formularioContacto__opcional input {
             background-color: lightsalmon;
-            font-size: 20px;
         }
 
         .formularioContacto__btnEnviar {
-            padding: 15px;
-            margin: 5px;
+            #botonEnviar {
+                background-color: rgb(115, 111, 111);
+                color: black;
+                border: 2px solid black;
+                padding: 4px;
+                transition: 1s;
+                @extend .configTextoForm;
+
+                &:hover {
+                    background-color: $mycolorInputForm;
+                    color: white;
+                    transform: scale(1.09);
+                    transition: 1s;
+                    border-radius: 15px;
+                }
+            }
         }
     }
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 450px) and (max-width: 600px) {
+@media (min-width: 620px) and (max-width: 750px) {
     .titulos {
         .titulo-importante1 {
             font-size: 50px;
+            padding-left: 50px;
         }
 
         .titulo-importante5 {
             font-size: 20px;
+            margin-left: 100px;
         }
 
         .formularioContacto {
-            .formularioContacto__dato {
-                padding: 15px;
-                margin: 5px;
-
-                .formularioContacto__dato--lbl-form {
-                    font-size: 25px;
-                }
-            }
-
-            .formularioContacto__btnEnviar {
-                font-size: 25px;
-                padding: 15px;
-                margin: 5px;
-            }
+            margin-left: 100px;
         }
     }
 }
 
-@media (min-width: 386px) and (max-width: 449px) {
+@media (min-width: 444px) and (max-width: 619px) {
     .titulos {
         .titulo-importante1 {
             font-size: 40px;
+            padding-left: 10px;
         }
 
         .titulo-importante5 {
             font-size: 20px;
+            margin-left: 30px;
         }
 
         .formularioContacto {
-            .formularioContacto__opcional textarea {
-                font-size: 20px;
-            }
-
-            .formularioContacto__obligatorio input {
-                font-size: 20px;
-            }
-
-            .formularioContacto__obligatorio select {
-                font-size: 20px;
-            }
-
-            .formularioContacto__opcional input {
-                font-size: 20px;
-            }
-
-            .formularioContacto__dato {
-                padding: 15px;
-                margin: 5px;
-
-                .formularioContacto__dato--lbl-form {
-                    font-size: 20px;
-                }
-            }
-
-            .formularioContacto__btnEnviar {
-                font-size: 20px;
-                padding: 15px;
-                margin: 5px;
-            }
+            width: 400px;
+            margin-left: 30px;
         }
     }
 }
 
-
-@media (min-width: 350px) and (max-width: 385px) {
+@media (max-width: 443px) {
     .titulos {
         .titulo-importante1 {
-            font-size: 35px;
+            font-size: 30px;
+            padding-left: 1px;
         }
 
         .titulo-importante5 {
             font-size: 15px;
+            margin-left: 5px;
         }
 
         .formularioContacto {
-            .formularioContacto__opcional textarea {
-                font-size: 15px;
-            }
-
-            .formularioContacto__obligatorio input {
-                font-size: 15px;
-            }
-
-            .formularioContacto__obligatorio select {
-                font-size: 15px;
-            }
-
-            .formularioContacto__opcional input {
-                font-size: 15px;
-            }
+            width: 280px;
+            margin-left: 3px;
 
             .formularioContacto__dato {
-                padding: 15px;
-                margin: 5px;
-
-                .formularioContacto__dato--lbl-form {
-                    font-size: 15px;
+                .formularioContacto__dato--inputForm {
+                    width: 200px;
                 }
-            }
-
-            .titulos .formularioContacto .formularioContacto__btnEnviar {
-                font-size: 15px;
-                padding: 15px;
-                margin: 5px;
-            }
-        }
-    }
-}
-
-@media (max-width: 350px) {
-    .titulos {
-        .titulo-importante1 {
-            font-size: 30px;
-        }
-
-        .titulo-importante5 {
-            font-size: 13px;
-        }
-
-        .formularioContacto {
-            .formularioContacto__opcional textarea {
-                font-size: 12px;
-            }
-
-            .formularioContacto__obligatorio input {
-                font-size: 12px;
-            }
-
-            .formularioContacto__obligatorio select {
-                font-size: 12px;
-            }
-
-            .formularioContacto__opcional input {
-                font-size: 12px;
-            }
-
-            .formularioContacto__dato {
-                padding: 10px;
-                margin: 5px;
-
-                .formularioContacto__dato--lbl-form {
-                    font-size: 12px;
-                }
-            }
-
-            .formularioContacto__btnEnviar {
-                font-size: 12px;
-                padding: 10px;
-                margin: 5px;
             }
         }
     }

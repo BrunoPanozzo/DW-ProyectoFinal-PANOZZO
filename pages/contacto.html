@@ -28,8 +28,8 @@
     <header class="encabezado">
         <nav class="navbar navbar-expand-lg bg-body-tertiary nav-encabezado" id="id-encabezado-contacto">
             <div class="container-fluid encabezado-cuerpo">
-                <a class="navbar-brand imagen-nav logo-img" href="../index.html"><img
-                        src="../recursos/compartidos/logo-cine.png" alt="logo cine"></a>
+                <a class="navbar-brand imagen-nav logo-img animate__animated animate__bounce" href="../index.html">
+                    <img src="../recursos/compartidos/logo-cine.png" alt="logo cine"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -68,7 +68,7 @@
 
     <main>
         <div class="titulos">
-            <h1 class="titulo-importante1">Contactanos</h1>
+            <h1 class="titulo-importante1 animate__animated animate__fadeInRight">Contactanos</h1>
             <p class="titulo-importante5">Debajo puede dejar sus consultas</p>
             <p class="titulo-importante5"> y/o comentarios sobre nuestro servicio</p>
             <!-- Bloque: etiqueta:form -->
@@ -76,26 +76,26 @@
                 <!-- Elemento: etiqueta div -->
                 <div class="formularioContacto__dato formularioContacto__obligatorio">
                     <!-- Modificador: etiqueta label -->
-                    <label for="nombre" class="formularioContacto__dato--lbl-form">Nombre y Apellido</label>
-                    <input name="nombre" type="text" required>
+                    <label for="nombre" class="formularioContacto__dato--lblForm">Nombre</label>
+                    <input class="formularioContacto__dato--inputForm" name="nombre" type="text" required>
                 </div>
                 <!-- Elemento: etiqueta div -->
                 <div class="formularioContacto__dato formularioContacto__obligatorio">
                     <!-- Modificador: etiqueta label -->
-                    <label for="mail" class="formularioContacto__dato--lbl-form">Email</label>
-                    <input name="mail" type="mail" required>
+                    <label for="mail" class="formularioContacto__dato--lblForm">Email</label>
+                    <input class="formularioContacto__dato--inputForm" name="mail" type="mail" required>
                 </div>
                 <!-- Elemento: etiqueta div -->
                 <div class="formularioContacto__dato formularioContacto__opcional">
                     <!-- Modificador: etiqueta label -->
-                    <label for="tel" class="formularioContacto__dato--lbl-form">Teléfono</label>
-                    <input name="tel" type="number" placeholder="* opcional">
+                    <label for="tel" class="formularioContacto__dato--lblForm">Teléfono</label>
+                    <input class="formularioContacto__dato--inputForm" name="tel" type="number" placeholder="* opcional">
                 </div>
                 <!-- Elemento: etiqueta div -->
                 <div class="formularioContacto__dato formularioContacto__obligatorio">
                     <!-- Modificador: etiqueta label -->
-                    <label for="ciudad" class="formularioContacto__dato--lbl-form">Ciudad</label>
-                    <select name="ciudad" required>
+                    <label for="ciudad" class="formularioContacto__dato--lblForm">Ciudad</label>
+                    <select class="formularioContacto__dato--inputForm" name="ciudad" required>
                         <option value="BsAs">Buenos Aires</option>
                         <option value="LP">La Plata</option>
                         <option value="MDQ">Mar del Plata</option>
@@ -104,8 +104,8 @@
                 <!-- Elemento: etiqueta div -->
                 <div class="formularioContacto__dato formularioContacto__obligatorio">
                     <!-- Modificador: etiqueta label -->
-                    <label for="motivo" class="formularioContacto__dato--lbl-form">Motivo</label>
-                    <select name="motivo" required>
+                    <label for="motivo" class="formularioContacto__dato--lblForm">Motivo</label>
+                    <select class="formularioContacto__dato--inputForm" name="motivo" required>
                         <option value="General">Consulta General</option>
                         <option value="PeliculaCartel">Por una película en cartelera</option>
                         <option value="PeliculaProximoEstreno">Por un próximo estreno</option>
@@ -116,28 +116,52 @@
                 <!-- Elemento: etiqueta div -->
                 <div class="formularioContacto__dato formularioContacto__opcional">
                     <!-- Modificador: etiqueta label -->
-                    <label for="mensaje" class="formularioContacto__dato--lbl-form">Mensaje</label>
-                    <textarea name="mensaje" placeholder="cuerpo del mensaje"></textarea>
+                    <label for="mensaje" class="formularioContacto__dato--lblForm">Mensaje</label>
+                    <textarea class="formularioContacto__dato--inputForm" name="mensaje" placeholder="cuerpo del mensaje"></textarea>
                 </div>
                 <!-- Elemento: etiqueta div -->
-                <div id="botonEnviar" class="formularioContacto__btnEnviar">
-                    <input type="submit" value="Enviar Mensaje">
+                <div class="formularioContacto__btnEnviar">
+                    <input id="botonEnviar" type="submit" value="Enviar Mensaje">
                 </div>
-            </form>
+            </form>            
         </div>
     </main>
 
     <footer id="id-footer-contacto" class="pie">
         <!-- <p>Ir arriba</p>  -->
         <a href="#id-encabezado-contacto"><img src="../recursos/compartidos/up-arrow.png" alt="up"></a>
-        <section class="contacto">
+        <section class="bloque-footer">
             <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-instagram-square"></i></a> -->
-            <button class="btn btn-primary"><span class="fa  fa-brands  fa-facebook"></span> | Facebook</button>
-            <button class="btn btn-info"><span class="fa fa-brands fa-twitter"></span> | Twitter</button>
-            <button class="btn btn-secondary"><span class="fa fa-brands fa-instagram"></span> | Instagram</button>
-            <button class="btn btn-danger"><span class="fa fa-brands fa-youtube"></span> | Youtube</button>
+            <article class="bloque-mas-info1">
+                <div>
+                    <h2 class="titulo-importante2">CineFans</h2>
+                    <ul class="lista1">
+                        <li class="hover-subrayado">Quiénes somos</li>
+                        <li class="hover-subrayado">Trabaja con nosotros</li>
+                        <li class="hover-subrayado">Unite al Club CineFans</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="bloque-mas-info2">
+                <div>
+                    <h2 class="titulo-importante2">Información</h2>
+                    <ul class="lista2">
+                        <li class="hover-subrayado">Festejá tu cumple</li>
+                        <li class="hover-subrayado">Promos Vigentes</li>
+                        <li class="hover-subrayado">Calificaciones</li>
+                        <li class="hover-subrayado">Ventas corporativas</li>
+                        <li class="hover-subrayado">Contactanos</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="redes-sociales">
+                <button class="btn btn-primary"><span class="fa  fa-brands  fa-facebook"></span> | Facebook</button>
+                <button class="btn btn-info"><span class="fa fa-brands fa-twitter"></span> | Twitter</button>
+                <button class="btn btn-secondary"><span class="fa fa-brands fa-instagram"></span> | Instagram</button>
+                <button class="btn btn-danger"><span class="fa fa-brands fa-youtube"></span> | Youtube</button>
+            </article>
         </section>
     </footer>
 

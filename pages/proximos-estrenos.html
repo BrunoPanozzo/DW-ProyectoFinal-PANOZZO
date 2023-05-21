@@ -28,8 +28,8 @@
     <header class="encabezado">
         <nav class="navbar navbar-expand-lg bg-body-tertiary nav-encabezado" id="id-encabezado-proximos-estrenos">
             <div class="container-fluid encabezado-cuerpo">
-                <a class="navbar-brand imagen-nav logo-img" href="../index.html"><img
-                        src="../recursos/compartidos/logo-cine.png" alt="logo cine"></a>
+                <a class="navbar-brand imagen-nav logo-img animate__animated animate__bounce" href="../index.html">
+                    <img src="../recursos/compartidos/logo-cine.png" alt="logo cine"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -68,13 +68,13 @@
 
     <main>
         <div class="proximos-estrenos">
-            <h1 class="titulo-importante1">VENTAS ANTICIPADAS</h1>
+            <h1 class="titulo-importante1 animate__animated animate__backInDown">VENTAS ANTICIPADAS</h1>
             <section class="contenedor-proximos-estrenos">
                 <article class="film film1">
                     <img class="imgfilm" src="../recursos/proximos-estrenos/guardianes de la galaxia.jpg"
                         alt="guardianes de la galaxia">
                     <div class="info-pelicula">
-                        <p class="nombre-pelicula titulo-importante4">GUARDIANES DE LA GALAXIA VOL3</p>
+                        <p class="nombre-pelicula titulo-importante4 hoverTituloImportante">GUARDIANES DE LA GALAXIA VOL3</p>
                         <p class="genero-pelicula">Género: Animación</p>
                         <p class="resumen-pelicula">GUARDIANES DE LA GALAXIA VOLUMEN 3 contiene varias escenas con luces
                             intermitentes que pueden afectar a los clientes susceptibles a padecer epilepsia
@@ -85,7 +85,7 @@
                     <img class="imgfilm" src="../recursos/proximos-estrenos/sombras de un crimen.jpg"
                         alt="sombras de un crimen">
                     <div class="info-pelicula">
-                        <p class="nombre-pelicula titulo-importante4">SOMBRAS DE UN CRIMEN</p>
+                        <p class="nombre-pelicula titulo-importante4 hoverTituloImportante">SOMBRAS DE UN CRIMEN</p>
                         <p class="genero-pelicula">Género: Policial</p>
                         <p class="resumen-pelicula">Liam Neeson da vida a Philip Marlowe, un detective privado que está
                             envuelto en malos negocios y una vida solitaria. Su suerte cambiará con la llegada de Clare
@@ -96,7 +96,7 @@
                     <img class="imgfilm" src="../recursos/proximos-estrenos/la heredera de la mafia.jpg"
                         alt="la heredera de la mafia">
                     <div class="info-pelicula">
-                        <p class="nombre-pelicula titulo-importante4">LA HEREDERA DE LA MAFIA</p>
+                        <p class="nombre-pelicula titulo-importante4 hoverTituloImportante">LA HEREDERA DE LA MAFIA</p>
                         <p class="genero-pelicula">Género: Acción Comedia</p>
                         <p class="resumen-pelicula">Una mujer de los suburbios de Estados Unidos hereda de su abuelo un
                             imperio de la mafia, y guiada por el consigliere de confianza de la familia, desafía las
@@ -107,7 +107,7 @@
                     <img class="imgfilm" src="../recursos/proximos-estrenos/los caballeros del zodiaco.jpg"
                         alt="los caballeros del zodiaco">
                     <div class="info-pelicula">
-                        <p class="nombre-pelicula titulo-importante4">LOS CABALLEROS DEL ZODIACO</p>
+                        <p class="nombre-pelicula titulo-importante4 hoverTituloImportante">LOS CABALLEROS DEL ZODIACO</p>
                         <p class="genero-pelicula">Género: Acción</p>
                         <p class="resumen-pelicula">Basada en la sensación internacional del anime, Caballeros del
                             Zodiaco por primera vez lleva a la pantalla grande la saga de Saint Seiya en acción real.
@@ -119,7 +119,7 @@
                         src="../recursos/proximos-estrenos/batman el caballero de la noche asciende.jpg"
                         alt="batman el caballero de la noche asciende">
                     <div class="info-pelicula">
-                        <p class="nombre-pelicula titulo-importante4">BATMAN EL CABALLERO DE LA NOCHE ASCIENDE</p>
+                        <p class="nombre-pelicula titulo-importante4 hoverTituloImportante">BATMAN EL CABALLERO DE LA NOCHE ASCIENDE</p>
                         <p class="genero-pelicula">Género: Acción Drama</p>
                         <p class="resumen-pelicula">Hace ocho años que Batman desapareció, dejando de ser un héroe para
                             convertirse en un fugitivo.</p>
@@ -128,7 +128,7 @@
                 <article class="film film6">
                     <img class="imgfilm" src="../recursos/proximos-estrenos/misantropo.jpg" alt="misantropo">
                     <div class="info-pelicula">
-                        <p class="nombre-pelicula titulo-importante4">MISANTROPO</p>
+                        <p class="nombre-pelicula titulo-importante4 hoverTituloImportante">MISANTROPO</p>
                         <p class="genero-pelicula">Género: Drama</p>
                         <p class="resumen-pelicula">Baltimore, la noche de año nuevo. Un feroz ataque producido por un
                             único hombre deja un saldo de 29 muertos y ni una sola pista. Eleanor Falco (Shailene
@@ -143,14 +143,38 @@
     <footer id="id-footer-proximos-estrenos" class="pie">
         <!-- <p>Ir arriba</p>  -->
         <a href="#id-encabezado-proximos-estrenos"><img src="../recursos/compartidos/up-arrow.png" alt="up"></a>
-        <section class="contacto">
+        <section class="bloque-footer">
             <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-instagram-square"></i></a> -->
-            <button class="btn btn-primary"><span class="fa  fa-brands  fa-facebook"></span> | Facebook</button>
-            <button class="btn btn-info"><span class="fa fa-brands fa-twitter"></span> | Twitter</button>
-            <button class="btn btn-secondary"><span class="fa fa-brands fa-instagram"></span> | Instagram</button>
-            <button class="btn btn-danger"><span class="fa fa-brands fa-youtube"></span> | Youtube</button>
+            <article class="bloque-mas-info1">
+                <div>
+                    <h2 class="titulo-importante2">CineFans</h2>
+                    <ul class="lista1">
+                        <li class="hover-subrayado">Quiénes somos</li>
+                        <li class="hover-subrayado">Trabaja con nosotros</li>
+                        <li class="hover-subrayado">Unite al Club CineFans</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="bloque-mas-info2">
+                <div>
+                    <h2 class="titulo-importante2">Información</h2>
+                    <ul class="lista2">
+                        <li class="hover-subrayado">Festejá tu cumple</li>
+                        <li class="hover-subrayado">Promos Vigentes</li>
+                        <li class="hover-subrayado">Calificaciones</li>
+                        <li class="hover-subrayado">Ventas corporativas</li>
+                        <li class="hover-subrayado">Contactanos</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="redes-sociales">
+                <button class="btn btn-primary"><span class="fa  fa-brands  fa-facebook"></span> | Facebook</button>
+                <button class="btn btn-info"><span class="fa fa-brands fa-twitter"></span> | Twitter</button>
+                <button class="btn btn-secondary"><span class="fa fa-brands fa-instagram"></span> | Instagram</button>
+                <button class="btn btn-danger"><span class="fa fa-brands fa-youtube"></span> | Youtube</button>
+            </article>
         </section>
     </footer>
 

@@ -13,6 +13,7 @@
         // margin: 50px;
         // padding-top: 30px;
         @extend .config-titulo-importante1;
+
     }
 
     .contenedor-cartelera {
@@ -95,15 +96,19 @@
                     // text-align: left;
                     // color: rgb(227, 10, 10);
                     // margin: 10px;
-                    @extend .config-titulo-importante4;
+                    @extend .config-titulo-importante4;                                      
                 }
 
                 .genero-pelicula {
                     padding: 10px;
+
+                    &:hover {
+                        text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black;
+                    }  
                 }
 
                 .resumen-pelicula {
-                    padding: 10px;
+                    padding: 10px;                    
                 }
             }
         }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* selector universal  */
 @import url("https://fonts.googleapis.com/css2?family=Anybody:wght@200&family=Asap:ital@1&family=Dancing+Script:wght@700&family=Nunito+Sans:wght@700&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
@@ -24,6 +25,21 @@
   text-align: left;
   color: #e30a0a;
   margin: 10px; }
+
+.configInputForm, .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--inputForm {
+  padding: 5px;
+  margin: 10px;
+  width: 340px;
+  border-radius: 10px;
+  border: 2px solid black; }
+
+.configTextoForm, .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lblForm, .titulos .formularioContacto .formularioContacto__btnEnviar #botonEnviar {
+  font-family: "Fjalla One", sans-serif;
+  text-align: center;
+  color: white; }
+
+.focusSombreadoInputForm, .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--inputForm:focus {
+  box-shadow: inset 0 0 10px #ac5555; }
 
 @keyframes cambiar {
   0% {
@@ -66,9 +82,48 @@
   transform: scaleX(1);
   transform-origin: bottom left; }
 
+.hoverTituloImportante {
+  --b: 0.15em;
+  /* grosor de la línea */
+  --c: #bf0707;
+  /* color de la línea */
+  color: #0000;
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p,0%))/100% 200%, linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+  background-clip: text,padding-box;
+  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(.3s - var(--_s,0s)); }
+
+.hoverTituloImportante:hover {
+  --_p: 100%;
+  --_s: .3s; }
+
+.hoverNombreCombos {
+  --c: #be041d;
+  /* color */
+  --b: .1em;
+  /* borde*/
+  --d: 20px;
+  /* profundida del cubo */
+  --_s: calc(var(--d) + var(--b));
+  color: var(--c);
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background: conic-gradient(at left var(--d) bottom var(--d), #0000 90deg, white 0 225deg, white 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), #0000 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+  transform: translate(calc(var(--d)/-1), var(--d));
+  clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  transition: 0.5s; }
+
+.hoverNombreCombos:hover {
+  transform: translate(0, 0);
+  clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%); }
+
 .nav-encabezado {
   min-height: 15vh;
-  background-image: linear-gradient(to right, #290101, #510101, #790101, #a10101);
+  background-image: url("../recursos/inicio/portadaCine.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-bottom: 10px solid #0b0606;
   width: 100%;
   display: flex;
@@ -82,7 +137,7 @@
   .nav-encabezado .encabezado-cuerpo .mi-navbar .lista-enlaces .enlace a {
     text-decoration: none;
     color: #dffffb;
-    font-size: 30px;
+    font-size: 20px;
     margin: 15px; }
     .nav-encabezado .encabezado-cuerpo .mi-navbar .lista-enlaces .enlace a:hover {
       color: #ebd219;
@@ -96,17 +151,17 @@
       background-color: #ebd219; }
 
 /* MEDIA QUERIES*/
-@media (min-width: 600px) and (max-width: 1000px) {
+@media (min-width: 600) and (max-width: 1000) {
   .nav-encabezado .encabezado-cuerpo .mi-navbar .lista-enlaces .enlace a {
-    font-size: 25px; } }
+    font-size: 15px; } }
 
 @media (min-width: 350px) and (max-width: 599px) {
   .nav-encabezado .encabezado-cuerpo .mi-navbar .lista-enlaces .enlace a {
-    font-size: 20px; } }
+    font-size: 12px; } }
 
 @media (max-width: 349px) {
   .nav-encabezado .encabezado-cuerpo .mi-navbar .lista-enlaces .enlace a {
-    font-size: 15px; } }
+    font-size: 10px; } }
 
 .pie {
   padding-bottom: 20px;
@@ -136,7 +191,7 @@
       color: #dffffb;
       margin: 30px; }
     .pie .bloque-footer .bloque-mas-info1 .lista1 {
-      max-width: 180px; }
+      max-width: 200px; }
     .pie .bloque-footer .bloque-mas-info2 {
       padding-left: 150px; }
       .pie .bloque-footer .bloque-mas-info2 .titulo-importante2 {
@@ -264,7 +319,6 @@
     .homepage .bloque-contenido .banner {
       width: 840px;
       height: 640px;
-      background-image: url("../recursos/inicio/portadaCine.jpg");
       background-color: #c04338;
       background-position: center;
       background-size: cover;
@@ -290,6 +344,8 @@
       font-weight: bold;
       font-size: 80px;
       font-family: "Black Han Sans", sans-serif; }
+      .homepage .bloque-mas-info .textos-varios .titulo-importante1:hover {
+        text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
     .homepage .bloque-mas-info .textos-varios .titulo-importante2 {
       text-align: left;
       font-size: 60px;
@@ -297,6 +353,8 @@
       text-decoration: underline;
       color: #dffffb;
       margin: 50px; }
+      .homepage .bloque-mas-info .textos-varios .titulo-importante2:hover {
+        text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
     .homepage .bloque-mas-info .textos-varios .titulo-importante3 {
       text-align: left;
       font-style: normal;
@@ -304,6 +362,8 @@
       font-family: Arial, Helvetica, sans-serif;
       color: #ebd219;
       margin: 50px; }
+      .homepage .bloque-mas-info .textos-varios .titulo-importante3:hover {
+        text-shadow: 1px 1px 2px #ebd219, 0 0 1em #ebd219, 0 0 0.2em #ebd219; }
     .homepage .bloque-mas-info .textos-varios .contenedor-lista-animada {
       display: flex;
       height: 40px;
@@ -323,6 +383,8 @@
         animation: cambiar 10s infinite; }
     .homepage .bloque-mas-info .imagenes-mas-info {
       padding: 20px; }
+      .homepage .bloque-mas-info .imagenes-mas-info:hover {
+        transform: scale(1.1); }
 
 /* MEDIA QUERIES*/
 @media (min-width: 1200px) and (max-width: 1600px) {
@@ -489,6 +551,8 @@
       font-family: Arial, Helvetica, sans-serif; }
     .cartelera .contenedor-cartelera .film .info-pelicula .genero-pelicula {
       padding: 10px; }
+      .cartelera .contenedor-cartelera .film .info-pelicula .genero-pelicula:hover {
+        text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black; }
     .cartelera .contenedor-cartelera .film .info-pelicula .resumen-pelicula {
       padding: 10px; }
 
@@ -748,11 +812,17 @@
 
 .titulos {
   background-color: #c04338;
-  min-height: 70vh; }
+  background-image: url("../recursos/contacto/fondoContacto.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  padding-bottom: 50px; }
   .titulos .titulo-importante1 {
     font-weight: bold;
     font-size: 80px;
-    font-family: "Black Han Sans", sans-serif; }
+    font-family: "Black Han Sans", sans-serif;
+    padding-left: 100px; }
   .titulos .titulo-importante5 {
     text-align: left;
     font-style: normal;
@@ -760,132 +830,85 @@
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    margin: 10px; }
+    margin-left: 150px; }
+    .titulos .titulo-importante5:hover {
+      text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; }
   .titulos .formularioContacto {
-    background-color: #c04338;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 30px;
+    margin-left: 150px;
+    border: #cab38534 solid 8px;
+    border-radius: 15px;
+    background-color: #f3dab527;
+    width: 500px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: baseline;
-    align-items: flex-start;
+    align-items: flex-end;
     align-content: space-between; }
     .titulos .formularioContacto .formularioContacto__dato {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: baseline;
-      align-content: space-around;
-      padding: 15px;
-      margin: 5px; }
-      .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lbl-form {
-        padding-right: 20px; }
+      align-items: center; }
+      .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lblForm {
+        text-shadow: 1px 1px 2px black; }
+        .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lblForm:hover {
+          text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+          font-size: 18px; }
+      .titulos .formularioContacto .formularioContacto__dato textarea {
+        height: 200px; }
     .titulos .formularioContacto .formularioContacto__opcional textarea {
-      background-color: lightpink;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif; }
-    .titulos .formularioContacto .formularioContacto__obligatorio input {
-      background-color: lightpink;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif; }
-    .titulos .formularioContacto .formularioContacto__obligatorio select {
-      background-color: lightpink;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif; }
+      background-color: lightsalmon; }
     .titulos .formularioContacto .formularioContacto__opcional input {
-      background-color: lightsalmon;
-      font-size: 20px; }
-    .titulos .formularioContacto .formularioContacto__btnEnviar {
-      padding: 15px;
-      margin: 5px; }
+      background-color: lightsalmon; }
+    .titulos .formularioContacto .formularioContacto__btnEnviar #botonEnviar {
+      background-color: #736f6f;
+      color: black;
+      border: 2px solid black;
+      padding: 4px;
+      transition: 1s; }
+      .titulos .formularioContacto .formularioContacto__btnEnviar #botonEnviar:hover {
+        background-color: #ac5555;
+        color: white;
+        transform: scale(1.09);
+        transition: 1s;
+        border-radius: 15px; }
 
 /* MEDIA QUERIES */
-@media (min-width: 450px) and (max-width: 600px) {
+@media (min-width: 620px) and (max-width: 750px) {
   .titulos .titulo-importante1 {
-    font-size: 50px; }
+    font-size: 50px;
+    padding-left: 50px; }
   .titulos .titulo-importante5 {
-    font-size: 20px; }
-  .titulos .formularioContacto .formularioContacto__dato {
-    padding: 15px;
-    margin: 5px; }
-    .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lbl-form {
-      font-size: 25px; }
-  .titulos .formularioContacto .formularioContacto__btnEnviar {
-    font-size: 25px;
-    padding: 15px;
-    margin: 5px; } }
-
-@media (min-width: 386px) and (max-width: 449px) {
-  .titulos .titulo-importante1 {
-    font-size: 40px; }
-  .titulos .titulo-importante5 {
-    font-size: 20px; }
-  .titulos .formularioContacto .formularioContacto__opcional textarea {
-    font-size: 20px; }
-  .titulos .formularioContacto .formularioContacto__obligatorio input {
-    font-size: 20px; }
-  .titulos .formularioContacto .formularioContacto__obligatorio select {
-    font-size: 20px; }
-  .titulos .formularioContacto .formularioContacto__opcional input {
-    font-size: 20px; }
-  .titulos .formularioContacto .formularioContacto__dato {
-    padding: 15px;
-    margin: 5px; }
-    .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lbl-form {
-      font-size: 20px; }
-  .titulos .formularioContacto .formularioContacto__btnEnviar {
     font-size: 20px;
-    padding: 15px;
-    margin: 5px; } }
+    margin-left: 100px; }
+  .titulos .formularioContacto {
+    margin-left: 100px; } }
 
-@media (min-width: 350px) and (max-width: 385px) {
+@media (min-width: 444px) and (max-width: 619px) {
   .titulos .titulo-importante1 {
-    font-size: 35px; }
+    font-size: 40px;
+    padding-left: 10px; }
   .titulos .titulo-importante5 {
-    font-size: 15px; }
-  .titulos .formularioContacto .formularioContacto__opcional textarea {
-    font-size: 15px; }
-  .titulos .formularioContacto .formularioContacto__obligatorio input {
-    font-size: 15px; }
-  .titulos .formularioContacto .formularioContacto__obligatorio select {
-    font-size: 15px; }
-  .titulos .formularioContacto .formularioContacto__opcional input {
-    font-size: 15px; }
-  .titulos .formularioContacto .formularioContacto__dato {
-    padding: 15px;
-    margin: 5px; }
-    .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lbl-form {
-      font-size: 15px; }
-  .titulos .formularioContacto .titulos .formularioContacto .formularioContacto__btnEnviar {
+    font-size: 20px;
+    margin-left: 30px; }
+  .titulos .formularioContacto {
+    width: 400px;
+    margin-left: 30px; } }
+
+@media (max-width: 443px) {
+  .titulos .titulo-importante1 {
+    font-size: 30px;
+    padding-left: 1px; }
+  .titulos .titulo-importante5 {
     font-size: 15px;
-    padding: 15px;
-    margin: 5px; } }
-
-@media (max-width: 350px) {
-  .titulos .titulo-importante1 {
-    font-size: 30px; }
-  .titulos .titulo-importante5 {
-    font-size: 13px; }
-  .titulos .formularioContacto .formularioContacto__opcional textarea {
-    font-size: 12px; }
-  .titulos .formularioContacto .formularioContacto__obligatorio input {
-    font-size: 12px; }
-  .titulos .formularioContacto .formularioContacto__obligatorio select {
-    font-size: 12px; }
-  .titulos .formularioContacto .formularioContacto__opcional input {
-    font-size: 12px; }
-  .titulos .formularioContacto .formularioContacto__dato {
-    padding: 10px;
-    margin: 5px; }
-    .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--lbl-form {
-      font-size: 12px; }
-  .titulos .formularioContacto .formularioContacto__btnEnviar {
-    font-size: 12px;
-    padding: 10px;
-    margin: 5px; } }
+    margin-left: 5px; }
+  .titulos .formularioContacto {
+    width: 280px;
+    margin-left: 3px; }
+    .titulos .formularioContacto .formularioContacto__dato .formularioContacto__dato--inputForm {
+      width: 200px; } }
 
 .proximos-estrenos {
   background-color: #c04338;
@@ -928,6 +951,8 @@
       font-family: Arial, Helvetica, sans-serif; }
     .proximos-estrenos .contenedor-proximos-estrenos .film .info-pelicula .genero-pelicula {
       padding: 10px; }
+      .proximos-estrenos .contenedor-proximos-estrenos .film .info-pelicula .genero-pelicula:hover {
+        text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black; }
     .proximos-estrenos .contenedor-proximos-estrenos .film .info-pelicula .resumen-pelicula {
       padding: 10px; }
 

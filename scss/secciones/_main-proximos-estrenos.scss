@@ -88,6 +88,9 @@
 
                 .genero-pelicula {
                     padding: 10px;
+                    &:hover {
+                        text-shadow: 1px 1px 1px black, 0 0 1em black, 0 0 0.2em black;
+                    } 
                 }
 
                 .resumen-pelicula {
